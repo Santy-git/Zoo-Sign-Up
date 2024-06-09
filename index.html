@@ -3,11 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Zoo</title>
   </head>
   <body>
-    <h1>A nice header!</h1>
+    <main class="container">
+      <div class="img-container">
+        <img src="assets/elephant.jpg" alt="elephant photo" id="bg-image" />
+        <h1 class="title">Zoo</h1>
+      </div>
+      <form action="#" method="post" id="sign-Up">
+        <h2 id="form-title">Elephantastic Sign-Up</h2>
+        <div class="form-container">
+          <div class="input-container">
+            <label for="first-name">FIRST NAME</label>
+            <input type="text" id="first-name" />
+          </div>
+          <div class="input-container">
+            <label for="last-name">LAST NAME</label>
+            <input type="text" id="last-name" />
+          </div>
+          <div class="input-container">
+            <label for="email">EMAIL</label>
+            <input type="email" id="email" />
+          </div>
+          <div class="input-container">
+            <label for="phone">PHONE</label>
+            <input type="text" id="phone" />
+          </div>
+          <div class="input-container">
+            <label for="pass">PASSWORD</label>
+            <input type="password" id="pass" />
+          </div>
+          <div class="input-container">
+            <label for="re-pass">CONFIRM PASSWORD</label>
+            <input type="password" id="re-pass" />
+          </div>
+        </div>
+        <button class="btn-create">Create Account</button>
+        <p>Already have an account? <a href="#" class="log-in">Log in</a></p>
+      </form>
+    </main>
   </body>
   <script src="app.js"></script>
 </html>
