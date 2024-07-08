@@ -4,6 +4,7 @@
   --fg-text: #d6d6d6;
   --dark: #014848;
   --links: #00943e;
+  --title-shadow: #afafaf4a;
 }
 
 * {
@@ -18,41 +19,56 @@ body {
   font-weight: 500;
 }
 
-h1,
-h2,
-h3 {
-  font-family: "Josefin Sans", sans-serif;
-}
-
 .container {
-  display: grid;
-  grid-template-columns: calc(100% - 60%) auto;
+  display: flex;
   height: 100vh;
-  width: 100%;
   overflow: hidden;
   background-color: var(--dark);
 }
 
-.img-container {
+.left-side {
   display: flex;
+  flex-direction: column;
+  background-image: url(assets/elephant.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: local;
+  min-width: 35%;
   align-items: center;
-  justify-content: center;
-  position: sticky;
-  left: 0;
-  margin: 0;
-}
-
-#bg-image {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100vh;
 }
 
 .title {
+  background-color: var(--title-shadow);
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--fg-text);
   font-size: 10rem;
+  top: 30vh;
+  width: 100%;
+}
+
+.copy {
+  display: flex;
+  position: absolute;
+  bottom: 3rem;
+  color: var(--fg-text);
+  font-size: .85rem;
+}
+
+.copy a{
+  text-decoration:underline;
+  color: var(--fg-text);
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 65%;
 }
 
 #sign-Up {
