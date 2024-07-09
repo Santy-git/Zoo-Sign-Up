@@ -82,6 +82,7 @@ body {
 
 #form-title {
   font-size: 5rem;
+  color: var(--fg-text);
 }
 
 .form-container {
