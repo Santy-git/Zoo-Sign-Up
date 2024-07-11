@@ -2,32 +2,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
 :root {
   /* light mode */
-  --primary:#6baeae;
-  --fg-h1:#fff;
+  --primary: #6baeae;
+  --fg-h1: #fff;
   --fg-h2: #abc6cf;
-  --fg-text:#070404;
+  --fg-text: #070404;
   --bg: #f6f4f4;
   --links: #7fb0c0;
-  --bg-input:#dfdfdf;
-  /* dark mode */
-  --primary:#6baeae;
-  --fg-h1-d:#fff;
-  --fg-h2-d: #304b54;
-  --fg-text-d:#f7f8f8;
-  --bg-d: #030303;
-  --links-d: #3e6e7e;
+  --bg-input: #dfdfdf;
+  --transition-duration: 0.2s;
+}
+
+body.dark-mode {
+  --primary: #6baeae;
+  --fg-h1: #fff;
+  --fg-h2: #36535c;
+  --fg-text: #f7f8f8;
+  --bg: #0c0c0c;
+  --links: #3e6e7e;
+  --bg-input: #4a4a4a;
 }
 
 * {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  transition: background-color var(--transition-duration), color var(--transition-duration);
 }
+
 
 body {
   font-size: 16px;
   font-family: "Lexend", sans-serif;
   font-weight: 500;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
@@ -74,7 +84,7 @@ body {
 }
 
 #autor {
-  color: var(--fg-text-d);
+  color: #fff;
 }
 
 .right-side {
@@ -83,7 +93,7 @@ body {
   min-width: 65%;
 }
 
-.xd {
+.theme-container {
   position: absolute;
   right: 3rem;
   top: 3rem;
@@ -217,6 +227,15 @@ body {
   color: var(--fg-h2);
 }
 
+#required {
+  margin-bottom: -3rem;
+  color: var(--fg-text);
+}
+
+.red {
+  color: red;
+}
+
 .form-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -251,6 +270,10 @@ body {
   border-bottom: solid red 2px;
 }
 
+.input-container input:valid {
+  border-bottom: solid green 2px;
+}
+
 .btn-create {
   font-family: inherit;
   font-size: 1rem;
@@ -277,4 +300,5 @@ body {
 #log-in {
   display: flex;
   margin:3rem 0 0 15rem;
+  color: var(--fg-text);
 }
