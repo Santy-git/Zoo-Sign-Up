@@ -1,10 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
 :root {
-  --fg-text: #d6d6d6;
-  --dark: #014848;
-  --links: #00943e;
-  --title-shadow: #afafaf4a;
+  /* light mode */
+  --primary:#6baeae;
+  --fg-h1:#fff;
+  --fg-h2: #abc6cf;
+  --fg-text:#070404;
+  --bg: #f6f4f4;
+  --links: #7fb0c0;
+  --bg-input:#dfdfdf;
+  /* dark mode */
+  --primary:#6baeae;
+  --fg-h1-d:#fff;
+  --fg-h2-d: #304b54;
+  --fg-text-d:#f7f8f8;
+  --bg-d: #030303;
+  --links-d: #3e6e7e;
 }
 
 * {
@@ -23,7 +34,7 @@ body {
   display: flex;
   height: 100vh;
   overflow: hidden;
-  background-color: var(--dark);
+  background-color: var(--bg);
 }
 
 .left-side {
@@ -39,12 +50,11 @@ body {
 }
 
 .title {
-  background-color: var(--title-shadow);
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--fg-text);
+  color: var(--fg-h1);
   font-size: 10rem;
   top: 30vh;
   width: 100%;
@@ -60,29 +70,37 @@ body {
 
 .copy a{
   text-decoration:underline;
-  color: var(--fg-text);
+  color: inherit;
+}
+
+#autor {
+  color: var(--fg-text-d);
 }
 
 .right-side {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   min-width: 65%;
+}
+
+.r-container {
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
 }
 
 #sign-Up {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  gap: 7rem;
+  gap: 5rem;
   flex-wrap: wrap;
+  margin: 10rem 0 0 10rem;
 }
 
 #form-title {
   font-size: 5rem;
-  color: var(--fg-text);
+  color: var(--fg-h2);
 }
 
 .form-container {
@@ -100,8 +118,49 @@ body {
   color: var(--fg-text);
 }
 
-.log-in {
+.input-container input {
+  width: 15rem;
+  height: 2rem;
+  background-color: var(--bg);
+  border: 0;
+  border-radius: 4px;
+  outline: none;
+  color: var(--fg-text);
+  font-family: inherit;
+  padding-left: .5rem;
+  border-bottom: solid 2px;
+  transition: ease .15s;
+}
+
+.input-container input:focus {
+  background-color: var(--bg-input);
+  border-bottom: solid red 2px;
+}
+
+.btn-create {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 15rem;
+  height: 3rem;
+  border: none;
+  border-radius: .7rem;
+  cursor: pointer;
+  background-color: var(--primary);
+  transition: box-shadow 0.3s ease;
+}
+
+.btn-create:hover {
+  box-shadow: 0 4px 8px var(--primary);
+}
+
+.links {
   text-decoration: none;
   color: var(--links);
   font-weight: 600;
+}
+
+#log-in {
+  display: flex;
+  margin:3rem 0 0 10rem;
 }

@@ -11,43 +11,45 @@
       <div class="left-side">
         <h1 class="title">Zoo</h1>
         <div class="copy">
-          <p>
+          <p id="autor">
             Photo by <a href="https://unsplash.com/es/@geraninmo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank"> Geranimo</a> on <a href="https://unsplash.com/es/fotos/fotografia-en-escala-de-grises-de-elefante-FhbyES4BjG8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank">Unsplash</a>
           </p>
         </div>
       </div>
       <div class="right-side">
-        <form action="#" method="post" id="sign-Up">
-          <h2 id="form-title">Sign-Up</h2>
-          <div class="form-container">
-            <div class="input-container">
-              <label for="first-name">FIRST NAME</label>
-              <input type="text" id="first-name" />
+        <section class="r-container">
+          <form action="#" method="post" id="sign-Up">
+            <h2 id="form-title">Sign-Up</h2>
+            <div class="form-container">
+              <div class="input-container">
+                <label for="first-name">FIRST NAME *</label>
+                <input type="text" title="Please enter your first name"minlength="1" maxlength="20" id="first-name" required=""/>
+              </div>
+              <div class="input-container">
+                <label for="last-name">LAST NAME *</label>
+                <input type="text" minlength="1" maxlength="20" id="last-name" required=""/>
+              </div>
+              <div class="input-container">
+                <label for="email">EMAIL *</label>
+                <input type="email" minlength="1" id="email" required=""/>
+              </div>
+              <div class="input-container">
+                <label for="phone">PHONE *</label>
+                <input type="tel" minlength="1" maxlength="20" id="phone" required=""/>
+              </div>
+              <div class="input-container">
+                <label for="pass">PASSWORD *</label>
+                <input type="password" minlength="8" id="pass" required=""/>
+              </div>
+              <div class="input-container">
+                <label for="re-pass">CONFIRM PASSWORD *</label>
+                <input type="password" minlength="8" id="re-pass" required=""/>
+              </div>
             </div>
-            <div class="input-container">
-              <label for="last-name">LAST NAME</label>
-              <input type="text" id="last-name" />
-            </div>
-            <div class="input-container">
-              <label for="email">EMAIL</label>
-              <input type="email" id="email" />
-            </div>
-            <div class="input-container">
-              <label for="phone">PHONE</label>
-              <input type="text" id="phone" />
-            </div>
-            <div class="input-container">
-              <label for="pass">PASSWORD</label>
-              <input type="password" id="pass" />
-            </div>
-            <div class="input-container">
-              <label for="re-pass">CONFIRM PASSWORD</label>
-              <input type="password" id="re-pass" />
-            </div>
-          </div>
-          <button class="btn-create">Create Account</button>
-          <p>Already have an account? <a href="#" class="log-in">Log in</a></p>
-        </form>
+            <button class="btn-create">Create Account</button>
+          </form>
+          <p id="log-in">Already have an account?&nbsp;<a href="#" class="links">Log in</a></p>
+        </section>
       </div>
     </main>
   </body>
