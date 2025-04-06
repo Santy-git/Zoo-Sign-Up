@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+
 :root {
-  /* light mode */
   --primary: #6baeae;
   --fg-h1: #fff;
   --fg-h2: #abc6cf;
@@ -29,7 +29,6 @@ body.dark-mode {
   transition: background-color var(--transition-duration), color var(--transition-duration);
 }
 
-
 body {
   font-size: 16px;
   font-family: "Lexend", sans-serif;
@@ -42,7 +41,7 @@ a {
 
 .container {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
   background-color: var(--bg);
 }
@@ -78,8 +77,8 @@ a {
   font-size: .85rem;
 }
 
-.copy a{
-  text-decoration:underline;
+.copy a {
+  text-decoration: underline;
   color: inherit;
 }
 
@@ -157,39 +156,33 @@ a {
   height: 24px;
 }
 
-/* .switch:hover */.sun svg {
+.sun svg {
   animation: rotate 15s linear infinite;
 }
 
 @keyframes rotate {
- 
   0% {
     transform: rotate(0);
   }
-
   100% {
     transform: rotate(360deg);
   }
 }
 
-/* .switch:hover */.moon svg {
+.moon svg {
   animation: tilt 5s linear infinite;
 }
 
 @keyframes tilt {
- 
   0% {
     transform: rotate(0deg);
   }
-
   25% {
     transform: rotate(-10deg);
   }
-
   75% {
     transform: rotate(10deg);
   }
-
   100% {
     transform: rotate(0deg);
   }
@@ -299,6 +292,174 @@ a {
 
 #log-in {
   display: flex;
-  margin:3rem 0 0 15rem;
+  margin: 3rem 0 0 15rem;
   color: var(--fg-text);
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-side {
+    position: relative;
+    height: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .title {
+    font-size: 5rem;
+    position: static;
+    margin: 0;
+    text-align: center;
+  }
+
+  .copy {
+    position: static;
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+
+  .right-side {
+    min-width: 100%;
+    padding: 2rem;
+  }
+
+  #sign-Up {
+    margin: 2rem 0;
+  }
+
+  .form-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .input-container input {
+    width: 100%;
+  }
+
+  .btn-create {
+    width: 100%;
+  }
+
+  #log-in {
+    margin: 2rem 0 0 0;
+    justify-content: center;
+  }
+
+  .theme-container {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    transform: scale(0.8);
+    z-index: 10;
+  }
+
+  .switch {
+    width: 48px;
+    height: 24px;
+  }
+
+  .slider:before {
+    height: 20px;
+    width: 20px;
+  }
+
+  .sun svg,
+  .moon svg {
+    width: 16px;
+    height: 16px;
+    top: 4px;
+  }
+
+  .sun svg {
+    width: 14px;
+    height: 14px;
+    top: 5px;
+    left: 30px;
+  }
+
+  .moon svg {
+    width: 14px;
+    height: 14px;
+    top: 5px;
+    left: 5px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-side {
+    min-width: 100%;
+    height: 40vh;
+  }
+
+  .title {
+    font-size: 7rem;
+    top: 15vh;
+  }
+
+  .right-side {
+    min-width: 100%;
+    padding: 3rem;
+  }
+
+  #sign-Up {
+    margin: 5rem auto;
+    max-width: 80%;
+  }
+
+  .form-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .btn-create {
+    width: 100%;
+  }
+
+  #log-in {
+    margin: 2rem 0 0 0;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1025px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .left-side {
+    min-width: 35%;
+  }
+
+  .right-side {
+    min-width: 65%;
+  }
+
+  #sign-Up {
+    margin: 10rem 0 0 15rem;
+  }
+
+  .form-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .btn-create {
+    width: 15rem;
+  }
+
+  #log-in {
+    margin: 3rem 0 0 15rem;
+  }
 }
