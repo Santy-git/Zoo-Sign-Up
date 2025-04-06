@@ -267,6 +267,39 @@ a {
   border-bottom: solid green 2px;
 }
 
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  flex: 1;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-password .icon-eye {
+  width: 20px;
+  height: 20px;
+  color: var(--fg-text);
+  transition: color 0.2s ease;
+}
+
+.toggle-password .icon-eye.hidden {
+  display: none;
+}
+
 .btn-create {
   font-family: inherit;
   font-size: 1rem;
@@ -294,6 +327,50 @@ a {
   display: flex;
   margin: 3rem 0 0 15rem;
   color: var(--fg-text);
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background-color: var(--bg);
+  color: var(--fg-text);
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 90%;
+}
+
+.modal-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.modal-content p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.modal-content .btn-create {
+  width: 100%;
+  max-width: 200px;
 }
 
 @media (max-width: 768px) {
@@ -400,13 +477,29 @@ a {
   }
 
   .left-side {
+    position: relative;
     min-width: 100%;
     height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
   }
 
   .title {
     font-size: 7rem;
-    top: 15vh;
+    top: auto;
+    position: static;
+    margin: 0;
+    text-align: center;
+  }
+
+  .copy {
+    position: static;
+    margin-top: 1rem;
+    text-align: center;
   }
 
   .right-side {

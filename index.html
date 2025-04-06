@@ -50,11 +50,27 @@
               </div>
               <div class="input-container">
                 <label for="pass">PASSWORD <span class="red">*</span></label>
-                <input type="password" minlength="8" id="pass" required=""/>
+                <div class="password-wrapper">
+                  <input type="password" minlength="8" id="pass" required="" />
+                  <button type="button" class="toggle-password" data-target="pass">
+                    <svg class="icon-eye" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                      <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                  </button>
+                </div>
               </div>
               <div class="input-container">
                 <label for="re-pass">CONFIRM PASSWORD <span class="red">*</span></label>
-                <input type="password" minlength="8" id="re-pass" required=""/>
+                <div class="password-wrapper">
+                  <input type="password" minlength="8" id="re-pass" required="" />
+                  <button type="button" class="toggle-password" data-target="re-pass">
+                    <svg class="icon-eye" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                      <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
             <button class="btn-create">Create Account</button>
@@ -63,6 +79,20 @@
         </section>
       </div>
     </main>
+    <div id="success-modal" class="modal hidden">
+      <div class="modal-content">
+        <h2>Account Created!</h2>
+        <p>Your account has been created successfully.</p>
+        <button id="close-modal" class="btn-create">Close</button>
+      </div>
+    </div>
+    <div id="error-modal" class="modal hidden">
+      <div class="modal-content">
+        <h2>Error</h2>
+        <p id="error-message">Something went wrong.</p>
+        <button id="close-error-modal" class="btn-create">Close</button>
+      </div>
+    </div>
   </body>
   <script src="app.js"></script>
 </html>
